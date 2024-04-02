@@ -43,10 +43,10 @@ console.log(see);
   }
 
   return (
-    <div className='h-screen w-screen bg-indigo-400 text-white flex items-center pt-3 justify-center'>
+    <div className='h-screen w-screen bg-indigo-400 text-white flex items-center pr-[2.5] pt-3 justify-center overflow-hidden'>
       <div>
         <section className='h-[5vh] w-[40vw] text-white font-semibold text-2xl  capitalize text-center flex items-center justify-center '><section className='max-sm:w-[100vw'>Sign up</section></section>
-        <div className='h-[60vh] w-[40vw] bg-indigo-100 rounded-lg flex flex-col items-center pt-11 p-5 max-lg:h-[60vh] max-lg:w-[90vw] shadow-lg max-lg:pt-5 max-sm:h-[70vh] max-sm:w-[90vw] gap-3 justify-start'>
+        <div className='min-h-[500px] w-[40vw] bg-indigo-100 rounded-lg flex flex-col items-center pt-11 p-5 max-lg:h-[60vh] max-lg:w-[90vw] shadow-lg max-lg:pt-5 max-sm:h-[70vh] max-sm:w-[90vw] gap-3 justify-start'>
           <label className='text-black text-md w-[100%] text-left'>Username
             <input onChange={handlechange} id="username" type="text" placeholder='Enter a Username' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
           </label>
@@ -54,12 +54,12 @@ console.log(see);
             <input onChange={handlechange} id="email" type="text" placeholder='Enter an E-mail' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
           </label>
           <label className='text-black text-md w-[100%] text-left'>Password
-            <input onChange={handlechange} id="password" type={see?"password":'text'} placeholder='Enter a password' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
-            <span onClick={handlesee} className='absolute  left-[66.2vw] top-[26.9rem] hover:brightness-90 hover:cursor-pointer bg-indigo-300 p-2 rounded-lg'>
+            <input onChange={handlechange} id="password" type={see?"password":'text'} placeholder='Enter a password' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 relative placeholder:text-gray-700 h-[55px] w-full p-1' />
+            <span onClick={handlesee} className='relative left-[92%] -top-[58px] hover:brightness-90 hover:cursor-pointer p-2 rounded-lg'>
               {see?<IoIosEye />:<IoIosEyeOff/>}
 </span>
           </label>
-          <button onClick={handlesubmit} className='w-[37vw] h-[5vh] ring-2 rounded-md text-black hover:bg-indigo-400 duration-150 mt-5 hover:shadow-lg'>Sign Up</button>
+          <button onClick={handlesubmit} className='w-[37vw] h-[40px] ring-2 rounded-md text-black hover:bg-indigo-400 duration-150  hover:shadow-lg'>Sign Up</button>
           <section className='text-black'>Already have an account?<Link to="/signin" className='text-blue-400'> Sign in</Link></section>
         </div>
       </div>

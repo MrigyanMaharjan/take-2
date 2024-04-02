@@ -57,12 +57,12 @@ const [see, setSee] = useState(false);
 
 
   return (
-    <div className='h-screen w-screen bg-emerald-400 text-white flex items-center pt-3 justify-center'>
+    <div className='h-screen w-screen overflow-hidden bg-emerald-400 text-white flex items-center pt-3 justify-center'>
       <div>
-        <section className='h-[5vh] w-[40vw] text-white font-semibold text-2xl capitalize text-center '>
+        <section className='h-[40px] w-[40vw] text-white font-semibold text-2xl capitalize text-center '>
           Sign in
         </section>
-        <div className='h-[55vh] w-[40vw] bg-emerald-100 rounded-lg flex flex-col items-center pt-11 p-5 max-lg:h-[60vh] max-lg:w-[90vw] max-sm:h-[60vh] max-sm:w-[90vw] gap-3 justify-start'>
+        <div className='min-h-[400px] w-[40vw] bg-emerald-100 rounded-lg flex flex-col items-center pt-11 p-5 max-lg:h-[300px] max-lg:w-[90vw] shadow-lg max-lg:pt-5 max-sm:h-[70vh] max-sm:w-[90vw] gap-3 justify-start'>
           <label className='text-black text-md w-[100%] text-left '>
             E-mail
             <input
@@ -79,24 +79,24 @@ const [see, setSee] = useState(false);
               onChange={(e) => handleChange(e)}
               id={'password'}
               type={see?"password":'text'} placeholder='Enter a password' className='  rounded-md bg-emerald-300 shadow-lg focus:shadow-emerald-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
-            <span onClick={handlesee} className='absolute hover:brightness-90 left-[66.2vw] top-[22.4rem] hover:cursor-pointer bg-emerald-300 p-2 rounded-lg'>
+            <span onClick={handlesee} className='relative left-[92%] -top-[58px] hover:brightness-90 hover:cursor-pointer p-2 rounded-lg'>
               {see?<IoIosEye />:<IoIosEyeOff/>}
 </span>
           </label>
           <button
             onClick={handleSubmit}
-            className='w-[37vw] h-[5vh] ring-2 rounded-md text-black hover:bg-emerald-400 duration-150 mt-5 hover:shadow-lg'
+            className='w-[37vw] h-[45px] ring-2 rounded-md text-black hover:bg-emerald-400 duration-150 -mt-5 hover:shadow-lg'
           >
             Sign in
           </button>
           <section className='text-black text-center'>
             Dont have an account?<Link to={'/auth'} className='text-blue-400 '>
-              {' '}
+      
               Sign up
             </Link>
           </section>
           {err?
-            <span className='h-[8vh] rounded-lg w-[100%] text-black flex items-center justify-center bg-red-400'>
+            <span className='h-[70px] rounded-lg w-[100%] text-black flex items-center justify-center bg-red-400'>
               {err}
             </span>
           :
