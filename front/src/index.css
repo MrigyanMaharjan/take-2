@@ -1,0 +1,35 @@
+@import"tailwindcss/base";
+@import"tailwindcss/components";
+@import"tailwindcss/utilities";
+
+.rainbow{
+    animation-name: rainbow;
+    animation-duration: 5s;  
+      animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-direction: reverse;
+}
+@keyframes rainbow{
+    0%{
+        color: aqua;
+    }
+    20%{
+        color: indigo;
+    }
+    40%{
+        color: lightgreen;
+    }
+    60%{
+        color: red;
+    }
+    80%{
+        color: rebeccapurple;
+    }
+    100%{
+        color: aqua;
+    }
+}
+.glow:hover{
+    filter: drop-shadow(0 0 0.45rem white);
+}
