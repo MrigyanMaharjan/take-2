@@ -2,13 +2,13 @@ import User from "../model/usermodel.js";
 import bcryptjs from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
-const signup = async (req, res) => {
+const signup = async (req, res,next) => {
   dotenv.config()
   console.log(req.body)
     const { username, password, email } = req.body;
 
      if (!username || !password || !email || username === '' || password === '' || email === '') {
-        return res.status(400).json({ message: "All fields required" });
+        return res.status(400).json("All fields required" );
     }
 
 
@@ -30,7 +30,7 @@ const signup = async (req, res) => {
 export default signup;
 
 
-export const signin = async (req, res) => {
+export const signin = async (req, res,next) => {
   
   console.log(req.body)
     const { password, email } = req.body;
@@ -43,13 +43,13 @@ export const signin = async (req, res) => {
  try{
        const validuser = await User.findOne({email});
        if(!validuser){
-        return console.log("usernotfound")
+        return res.status(400).json({message: "Wrong credentials"})
        }
   
        const validpassword= bcryptjs.compareSync(password,validuser.password);
 
 if(!validpassword){
-  return console.log("invalidpassword");
+  return res.status(400).json({message: "Wrong credentials"})
 }
 
 const token= jwt.sign(
@@ -60,7 +60,7 @@ res.status(200).cookie("access_token",token,{
 }).json("signed in");
 
  }catch(error){
-  return res.status(400).json({ message: "failed" });
+return next(error);
 
  }
 };

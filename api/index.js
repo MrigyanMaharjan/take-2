@@ -26,3 +26,14 @@ app.listen(PORT,(req,res)=>{
 app.use("/",mainrouter)
 app.use("/",authrouter)
 app.use("/",authrouter)
+
+app.use((err,req,res,next)=>{
+   const statuscode=err.statuscode || 500;
+   const message=err.message;
+   res.json({
+      success:false,
+      statuscode,
+      message,
+
+   })
+})
