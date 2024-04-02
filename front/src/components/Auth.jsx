@@ -13,7 +13,7 @@ const Auth = () => {
     e.preventDefault(); // Prevent default form submission
 
     try {
-      const res = await fetch('http://localhost:3000/autho', {
+      const res = await fetch('https://take-2-3.onrender.com/autho', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)
