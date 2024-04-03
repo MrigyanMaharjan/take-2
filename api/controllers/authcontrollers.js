@@ -8,7 +8,7 @@ const signup = async (req, res,next) => {
     const { username, password, email } = req.body;
 
      if (!username || !password || !email || username === '' || password === '' || email === '') {
-        return res.status(400).json("All fields required" );
+        return res.status(400).json({message:"All fields required"} );
     }
 
 

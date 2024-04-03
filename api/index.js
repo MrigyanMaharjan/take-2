@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import mainrouter from './routes/mainroute.js';
 import authrouter from './routes/auth.route.js'
 import mongoose from 'mongoose';
+import addroute from './routes/addroute.js';
 import cors from 'cors';
 
 dotenv.config()
@@ -26,6 +27,7 @@ app.listen(PORT,(req,res)=>{
 app.use("/",mainrouter)
 app.use("/",authrouter)
 app.use("/",authrouter)
+app.use('/',addroute)
 
 app.use((err,req,res,next)=>{
    const statuscode=err.statuscode || 500;

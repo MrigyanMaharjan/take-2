@@ -5,40 +5,47 @@ import { useContext } from 'react';
 import Authcontext from '../context/authcontext';
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
+import { Audio } from 'react-loader-spinner'
 
 
 const Signin = () => {
   const [form, setForm] = useState({});
   const [err, setErr] = useState();
   const navigate = useNavigate();
+  const[loading,setLoading]=useState(false);
 const Auth=useContext(Authcontext)
 const [see, setSee] = useState(false);
 
   const handleSubmit = async () => {
 
-   
     try {
+      setLoading(true)
       const res = await fetch('https://take-2-3.onrender.com/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)
       });
+      
       const data = await res.json();
       console.log(data);
+      setLoading(false)
 
       if (res.ok) {
         Auth.value=true;
         console.log('success');
         navigate('/home');
+        setLoading(false)
 
         
       }
       setErr(data.message)
     } catch (error) {
      console.log(error)
+     setLoading(false)
      
     }
   };
+  console.log(`loading is ${loading}`);
   const handlesee=()=>{
     if(see===true){
       setSee(false)
@@ -50,8 +57,9 @@ const [see, setSee] = useState(false);
   }
   console.log(see);
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.id]: e.target.value });
+    setForm({ ...form, [e.target.id]: e.target.value.trim() });
     console.log(form);
+    setErr("")
     
   };
 
@@ -87,7 +95,16 @@ const [see, setSee] = useState(false);
             onClick={handleSubmit}
             className='w-[37vw] h-[45px] ring-2 rounded-md text-black hover:bg-emerald-400 duration-150 -mt-5 hover:shadow-lg'
           >
-            Sign in
+            {loading?
+            <Audio
+  height="20"
+  width="650"
+  radius="9"
+  color="black"
+  ariaLabel="loading"
+  wrapperStyle
+  wrapperClass
+/>:"Sign in"}
           </button>
           <section className='text-black text-center'>
             Dont have an account?<Link to={'/auth'} className='text-blue-400 '>

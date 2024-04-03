@@ -15,23 +15,23 @@ const Navbar = () => {
     };
 
     return (
-        <div  className='selection:bg-black selection:text-white h-[10vh] bg-emerald-500 flex items-center justify-between px-[20px] relative'>
+        <div  className='selection:bg-black selection:text-white h-[10vh] bg-black text-white border-b-2 border-b-gray-200 flex items-center gap-[20vw] mx-[40px] relative'>
             <section  className='selection:bg-black selection:text-white text-xl capitalize font-mono tracking-tight'>Confess trinity</section>
-            <article className='flex max-sm:hidden items-center justify-center gap-5 '>
+            <article className='flex max-sm:hidden items-center justify-center  relative '>
                     
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] hover:bg-black hover:rounded-full px-3 rounded-xl  hover:shadow-lg hover:shadow-blue-900/50 hover:border-black p-[7px] hover:text-white  border-emerald-400  duration-150' to={"/Confessions"} element={<Contact/>}>Confessions</Link>
-                    
-                    
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] hover:bg-black hover:rounded-full px-3 rounded-xl  hover:shadow-lg hover:shadow-blue-900/50 hover:border-black p-[7px] hover:text-white  border-emerald-400  duration-150' to={"/About"} element={<About/>}>About Us</Link>
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-white   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Confessions"} element={<Contact/>}>Confessions</Link>
                     
                     
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] hover:bg-black hover:rounded-full px-3 rounded-xl  hover:shadow-lg hover:shadow-blue-900/50 hover:border-black p-[7px] hover:text-white  border-emerald-400  duration-150' to={"/Add confession"} element={<Add/>}>Add confession</Link>
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-white   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/About"} element={<About/>}>About Us</Link>
                     
                     
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] hover:bg-black hover:rounded-full px-3 rounded-xl  hover:shadow-lg hover:shadow-blue-900/50 hover:border-black p-[7px] hover:text-white  border-emerald-400  duration-150' to={"/Contact"} element={<Contact/>}>Contact Us</Link>
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-white   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Add confession"} element={<Add/>}>Add confession</Link>
                     
                     
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] hover:bg-black hover:rounded-full px-3 rounded-xl  hover:shadow-lg hover:shadow-blue-900/50 hover:border-black p-[7px] hover:text-white  border-emerald-400  duration-150' to={"/More"} element={<More/>}>More</Link>
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-white   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Contact"} element={<Contact/>}>Contact Us</Link>
+                    
+                    
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-white   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/More"} element={<More/>}>More</Link>
                     
                 </article>
             

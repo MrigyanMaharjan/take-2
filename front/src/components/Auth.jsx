@@ -3,43 +3,57 @@ import { Link } from 'react-router-dom'; // Corrected import
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
+import { Audio } from 'react-loader-spinner'
 
 const Auth = () => {
   const navigate=useNavigate()
+  const[loading,setLoading]=useState(false);
   const [form, setForm] = useState({});
   const [see, setSee] = useState(false);
+  const [err,setErr]= useState("")
   
   const handlesubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
 
     try {
+      setLoading(true)
       const res = await fetch('https://take-2-3.onrender.com/autho', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)
       });
       const data = await res.json();
-      console.log(data);
+      setLoading(false)
       if(res.ok){
        navigate("/signin")
+       setLoading(false)
       }
+      else{
+        setErr(data)
+
+      }
+      console.log(err);
     } catch (error) {
       console.error('Error:', error);
+      setLoading(false)
     }
   }
 
 const handlesee=()=>{
   if(see===true){
     setSee(false)
+    setLoading(false)
   }
   else{
     setSee(true)
+    setLoading(false)
   }
   
 }
 console.log(see);
   const handlechange = (e) => {
-    setForm({ ...form, [e.target.id]: e.target.value });
+    setForm({ ...form, [e.target.id]: e.target.value.trim() });
+    setErr("")
   }
 
   return (
@@ -59,9 +73,27 @@ console.log(see);
               {see?<IoIosEye />:<IoIosEyeOff/>}
 </span>
           </label>
-          <button onClick={handlesubmit} className='w-[37vw] h-[40px] ring-2 rounded-md text-black hover:bg-indigo-400 duration-150  hover:shadow-lg'>Sign Up</button>
-          <section className='text-black'>Already have an account?<Link to="/signin" className='text-blue-400'> Sign in</Link></section>
+          <button onClick={handlesubmit} className='w-[37vw] h-[40px] ring-2 rounded-md text-black hover:bg-indigo-400 duration-150  hover:shadow-lg'>{loading?
+            <Audio
+  height="20"
+  width="650"
+  radius="9"
+  color="black"
+  ariaLabel="loading"
+  wrapperStyle
+  wrapperClass
+/>:"Sign up"}</button>
+          <section className='text-black'>Already have an account?<Link to="/signin" className='text-blue-400'> sign up</Link></section>
+          {err?
+            <span className='h-[70px] rounded-lg w-[100%] text-black flex items-center justify-center bg-red-400'>
+              {err}
+            </span>
+          :
+          <span className='h-[8vh] rounded-lg w-[100%] flex items-center justify-center bg-transparent'>
+          
+        </span>}
         </div>
+
       </div>
      
     </div>
