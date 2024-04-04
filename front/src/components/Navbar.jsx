@@ -15,8 +15,8 @@ const Navbar = () => {
     };
 
     return (
-        <div  className='selection:bg-black selection:text-white h-[10vh] bg-black text-white border-b-2 border-b-gray-200 flex items-center gap-[20vw] mx-[40px] relative'>
-            <section  className='selection:bg-black selection:text-white text-xl capitalize font-mono tracking-tight'>Confess trinity</section>
+        <div  className='selection:bg-black selection:text-white h-[10vh] bg-black text-white border-b-2 border-b-gray-200 flex items-center gap-[20vw] mx-[0px] sm:mx-[40px] relative'>
+            <section  className='selection:bg-black selection:text-white text-xl pl-2 capitalize font-mono tracking-tight'>Confess trinity</section>
             <article className='flex max-sm:hidden items-center justify-center  relative '>
                     
                         <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-white   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Confessions"} element={<Contact/>}>Confessions</Link>
@@ -39,25 +39,20 @@ const Navbar = () => {
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: active ? 0 : "100%", opacity: active ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
-                className='h-screen bg-green-300 max-sm:flex w-[60%] absolute top-0 right-0'
+                className='h-screen bg-gray-700 max-sm:flex w-[60%] absolute top-0 right-0'
             >
                 <section onClick={toggleSidebar} className='absolute right-2 top-3 max-sm:flex hidden'></section>
-                <ul className='flex flex-col pt-9 gap-5'>
-                    <li className='active:translate-y-1 max-sm:hover:w-[50vw] hover:opacity-75 border-2 hover:text-black hover:rounded-lg hover:shadow-lg hover:shadow-indigo-900/50 hover:border-black p-[10px] border-transparent duration-100'>
-                        <Link to={"/Confessions"} element={<Contact/>}>Confessions</Link>
-                    </li>
-                    <li className='active:translate-y-1 max-sm:hover:w-[50vw] hover:opacity-75 border-2 hover:text-black hover:rounded-lg hover:shadow-lg hover:shadow-indigo-900/50 hover:border-black p-[10px] border-transparent duration-100'>
-                        <Link to={"/About"} element={<About/>}>About Us</Link>
-                    </li>
-                    <li className='active:translate-y-1 max-sm:hover:w-[50vw] hover:opacity-75 border-2 hover:text-black hover:rounded-lg hover:shadow-lg hover:shadow-indigo-900/50 hover:border-black p-[10px] border-transparent duration-100'>
-                        <Link to={"/Add confession"} element={<Add/>}>Add confession</Link>
-                    </li>
-                    <li className='active:translate-y-1 max-sm:hover:w-[50vw] hover:opacity-75 border-2 hover:text-black hover:rounded-lg hover:shadow-lg hover:shadow-indigo-900/50 hover:border-black p-[10px] border-transparent duration-100'>
-                        <Link to={"/Contact"} element={<Contact/>}>Contact Us</Link>
-                    </li>
-                    <li className='active:translate-y-1 max-sm:hover:w-[50vw] hover:opacity-75 border-2 hover:text-black hover:rounded-lg hover:shadow-lg hover:shadow-indigo-900/50 hover:border-black p-[10px] border-transparent duration-100'>
-                        <Link to={"/More"} element={<More/>}>More</Link>
-                    </li>
+                <ul className='flex flex-col w-[100%] pt-[3rem] gap-5'>
+                    <Link to={"/Confessions"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
+                        Confessions</Link>
+                        <Link to={"/add"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
+                        Add confession</Link>
+                        <Link to={"/Contact"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
+                        Contact Us</Link>
+                        <Link to={"/More"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
+                        More</Link>
+                        <Link to={"/About"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
+                        About</Link>
                 </ul>
             </motion.div>
 
@@ -67,7 +62,7 @@ const Navbar = () => {
                 animate={{ x: active ? 0 : "-100%" }}
                 transition={{ duration: 0.3 }}
                 onClick={toggleSidebar}
-                className='hamburger absolute right-2 top-6 max-sm:flex hidden'
+                className='hamburger absolute right-0 top-[3.5vh] max-sm:flex hidden'
             >
                 {active ? <TfiClose /> : <TfiAlignJustify />}
             </motion.div>

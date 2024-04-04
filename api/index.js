@@ -5,6 +5,7 @@ import authrouter from './routes/auth.route.js'
 import mongoose from 'mongoose';
 import addroute from './routes/addroute.js';
 import cors from 'cors';
+import People from './model/peoplemodel.js';
 
 dotenv.config()
 
@@ -28,6 +29,16 @@ app.use("/",mainrouter)
 app.use("/",authrouter)
 app.use("/",authrouter)
 app.use('/',addroute)
+
+app.get('/add', async (req, res) => {
+   try {
+       const data = await People.find();
+       res.json(data);
+   } catch (err) {
+       console.error('Error fetching data:', err);
+       res.status(500).json({ error: 'Internal server error' });
+   }
+});
 
 app.use((err,req,res,next)=>{
    const statuscode=err.statuscode || 500;

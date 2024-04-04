@@ -17,7 +17,7 @@ const Peopleschema=new mongoose.Schema({
         unique:false,
     }
 
-})
+} , {timestamps:true})
 
 const People= mongoose.model('People',Peopleschema);
 

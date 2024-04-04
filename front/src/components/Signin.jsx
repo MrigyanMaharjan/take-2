@@ -14,7 +14,7 @@ const Signin = () => {
   const navigate = useNavigate();
   const[loading,setLoading]=useState(false);
 const Auth=useContext(Authcontext)
-const [see, setSee] = useState(false);
+const [see, setSee] = useState(true);
 
   const handleSubmit = async () => {
 

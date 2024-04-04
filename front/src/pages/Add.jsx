@@ -24,8 +24,8 @@ const handlepost = async () => {
       <section className='h-[10vh] w-[100%] '>Name:
         <input onChange={(e)=>handlechange(e)} id='name' type="text" placeholder='Enter the name of person ' className='h-[7vh] placeholder:text-sm text-black placeholder:text-black text-sm px-2 rounded-md w-[100%]'/>
       </section>
-      <section className='h-[10vh] w-[100%] '>image
-        <input onChange={(e)=>handlechange(e)} id='image' type='file' placeholder='Enter the image ' className='h-[70px] placeholder:text-sm text-black placeholder:text-black text-sm px-2 rounded-md w-[100%]'/>
+      <section className='h-[10vh] w-[100%] text-white'>image
+        <input onChange={(e)=>handlechange(e)} id='image' type='file' placeholder='Enter the image ' className='h-[90px] placeholder:text-sm text-black placeholder:text-black text-sm px-2 rounded-md w-[100%]'/>
       </section>
       <section className='h-[10vh] w-[100%] '>description
         <input onChange={(e)=>handlechange(e)} id='description' type="text" placeholder='Enter some description (optional) ' className='h-[7vh] placeholder:text-sm text-black placeholder:text-black text-sm px-2 rounded-md w-[100%]'/>

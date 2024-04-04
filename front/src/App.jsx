@@ -11,6 +11,7 @@ import More from './pages/More.jsx'
 import Authstate from './context/authstate.jsx'
 import Chat from './components/Chat.jsx'
 import Feed from './components/Feed.jsx'
+import Confession from './pages/Confession.jsx'
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
           <Route path='/auth' element={<Auth/>}  ></Route>
           <Route path='/signin' element={<Signin/>}></Route>
           <Route path='/home' element={<Homepage/>}></Route>
-          <Route path={"/Confessions"} element={<Contact/>}></Route>
+          <Route path={"/Confessions"} element={<Confession/>}></Route>
           <Route path={"/About"} element={<About/>}></Route>
           <Route path={"/Add confession"} element={<Add/>}></Route>
           <Route path={"/Contact"} element={<Contact/>}></Route>
