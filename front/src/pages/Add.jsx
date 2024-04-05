@@ -19,7 +19,7 @@ let text=document.querySelector(".textarea");
 const handlepost = async () => {
   text.value=""
     setLoading(true)
-    const postdata = await fetch('http://localhost:3000/add', {
+    const postdata = await fetch('https://take-2-3.onrender.com/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formdata)
