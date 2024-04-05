@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 <link rel="stylesheet" href="index.css" />
 const Homepage = () => {
   return (
-    <div className='bg-black  max-sm:text-md   h-screen w-screen overflow-hidden'>
+    <div className='bg-gray-900  max-sm:text-md   h-screen w-screen overflow-hidden'>
       <Navbar/>
       <section className=' selection:bg-white flex flex-col gap-5 max-sm:pt-10 selection:text-black text-white h-full'>
         <article className='h-[10vh] w-screen flex items-center justify-center font-mono text-2xl text-center'>You are very welcome to our website confess trinity</article>

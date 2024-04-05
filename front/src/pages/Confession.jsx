@@ -18,7 +18,7 @@ const Confession = () => {
         };
 
         fetchData();
-    }, []); // Fetch data once when the component mounts
+    }, []);
 
     return (
         <div>

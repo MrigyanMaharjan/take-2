@@ -83,7 +83,7 @@ console.log(see);
   wrapperStyle
   wrapperClass
 />:"Sign up"}</button>
-          <section className='text-black'>Already have an account?<Link to="/signin" className='text-blue-400'> sign up</Link></section>
+          <section className='text-black'>Already have an account?<Link to="/signin" className='text-blue-400'> sign in</Link></section>
           {err?
             <span className='h-[70px] rounded-lg w-[100%] text-black flex items-center justify-center bg-red-400'>
               {err}
