@@ -7,7 +7,7 @@ const Confession = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/add', { method: "GET" });
+                const response = await fetch('https://take-2-3.onrender.com/add', { method: "GET" });
                 const fetchedData = await response.json();
                 setData(fetchedData);
                 setFetched(true);
