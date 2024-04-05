@@ -33,3 +33,17 @@
 .glow:hover{
     filter: drop-shadow(0 0 0.45rem white);
 }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(123, 123, 154); 
+    border-radius: 10px; 
+}

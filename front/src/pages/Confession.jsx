@@ -21,11 +21,12 @@ const Confession = () => {
     }, []);
 
     return (
-        <div>
+        <div className='bg-gray-900 overflow-y-auto overflow-x-hidden h-screen w-screen gap-[1rem] text-white flex items-center flex-col justify-start pt-10'>
+            <h1 className='text-3xl text-gray-200'>Confessions</h1>
             {fetched ? (
-                <ul>
+                <ul className='grid pb-10 min-h-screen w-screen gap-4 lg:grid-cols-4 sm:grid-cols-1 max-sm:text-sm md:text-md lg:text-md ms:grid-cols-2 md:grid-cols-3'>
                     {data.map((item, index) => (
-                        <li key={index}>{item.name}</li>
+                        <article className='bg-gray-800 w-full hover:scale-[1.0] transition min-h-[15vh] flex rounded-md items-center justify-center' key={index}>{item.confession}</article>
                     ))}
                 </ul>
             ) : (
