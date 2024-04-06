@@ -29,7 +29,7 @@ const Auth = () => {
        setLoading(false)
       }
       else{
-        setErr(data)
+        setErr(data.message)
 
       }
       console.log(err);
