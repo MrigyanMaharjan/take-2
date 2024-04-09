@@ -15,7 +15,7 @@ const Navbar = () => {
     };
 
     return (
-        <motion.div initial={{y:'-100%'}} animate={{y:'0%'}} transition={{duration:0.3,type:'spring'}} className='selection:bg-black selection:text-white h-[10vh] max-sm:h-[8vh] bg-gray-800 sm:bg-gray-900 text-white border-b-2 border-b-gray-200 flex items-center md:flex-nowrap  sm:gap-[40px]  mx-[0px] sm:mx-[40px] relative'>
+        <motion.div initial={{y:'-100%'}} animate={{y:'0%'}} transition={{duration:0.3,type:'spring'}} className='selection:bg-black z-50 selection:text-white h-[10vh] max-sm:h-[8vh] bg-transparent  text-white border-b-2 border-b-gray-200 flex items-center md:flex-nowrap sm:gap-[40px]  mx-[0px] sm:mx-[40px] relative'>
             <section className='selection:bg-black selection:text-white text-xl pl-2 capitalize font-mono tracking-tight lg:text-nowrap'>Confess trinity</section>
             <article className=' sm:text-sm lg:text-[15px] flex max-sm:hidden items-center w-[100%] justify-center lg:-left-[5rem] sm:tracking-tighter  relative '>
                     
@@ -39,9 +39,9 @@ const Navbar = () => {
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: active ? 0 : "100%", opacity: active ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
-                className='h-screen bg-gray-700 max-sm:flex w-[60%] absolute top-0 right-0'
+                className='h-screen bg-gray-900 max-sm:flex w-[60%] absolute top-0 right-0'
             >
-                <section onClick={toggleSidebar} className='absolute right-2 top-3 max-sm:flex hidden'></section>
+                <section onClick={toggleSidebar} className='absolute right-2 bg-gray-900 top-3 max-sm:flex hidden'></section>
                 <ul className='flex flex-col w-[100%] pt-[3rem] gap-5'>
                     <Link to={"/Confessions"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
                         Confessions</Link>
