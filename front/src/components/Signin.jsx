@@ -66,6 +66,9 @@ const [see, setSee] = useState(true);
 
   return (
     <div className='h-screen w-screen overflow-hidden bg-emerald-400 text-white flex items-center pt-3 justify-center'>
+          <div className='w-1/2 h-[100vh] flex items-center justify-center'>
+     <section className='text-3xl font-mono'>Rate x</section>
+     </div>
       <div>
         <section className='h-[40px] w-[40vw] text-white font-semibold text-2xl capitalize text-center '>
           Sign in

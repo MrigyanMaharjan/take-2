@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Loader from "react-js-loader";
 
-const Confession = () => {
+const Rating = () => {
     const [fetched, setFetched] = useState(false);
     const [data, setData] = useState([]);
 
@@ -23,7 +23,7 @@ const Confession = () => {
 
     return (
         <div className='bg-gray-900 overflow-y-auto overflow-x-hidden h-screen w-screen max-sm:px-5 gap-[1rem] text-white flex items-center flex-col justify-start pt-10'>
-            <h1 className='text-3xl text-gray-200'>Confessions</h1>
+            <h1 className='text-3xl text-gray-200'>Ratings</h1>
             {fetched ? (
                 <ul className='grid pb-10 min-h-screen w-screen gap-4 lg:grid-cols-4 sm:grid-cols-1 max-sm:text-sm md:text-sm lg:text-md ms:grid-cols-2 md:grid-cols-3'>
                     {data.map((item, index) => (
@@ -39,4 +39,4 @@ const Confession = () => {
     );
 };
 
-export default Confession;
+export default Rating;

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const Peopleschema=new mongoose.Schema({
-    confession:{
+    Item:{
         type:String,
         required:true,
         unique:false,

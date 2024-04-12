@@ -16,16 +16,16 @@ const Navbar = () => {
 
     return (
         <motion.div initial={{y:'-100%'}} animate={{y:'0%'}} transition={{duration:0.3,type:'spring'}} className='selection:bg-black z-50 selection:text-white h-[10vh] max-sm:h-[8vh] bg-transparent  text-white border-b-2 border-b-gray-200 flex items-center md:flex-nowrap sm:gap-[40px]  mx-[0px] sm:mx-[40px] relative'>
-            <section className='selection:bg-black selection:text-white text-xl pl-2 capitalize font-mono tracking-tight lg:text-nowrap'>Confess trinity</section>
+            <section className='selection:bg-black selection:text-white text-3xl pl-2 capitalize font-mono tracking-tight lg:text-nowrap'>Rate X</section>
             <article className=' sm:text-sm lg:text-[15px] flex max-sm:hidden items-center w-[100%] justify-center lg:-left-[5rem] sm:tracking-tighter  relative '>
                     
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-gray-50 sm:text-nowrap  hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Confessions"} element={<Contact/>}>Confessions</Link>
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-gray-50 sm:text-nowrap  hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Rating"} element={<Contact/>}>Ratings</Link>
                     
                     
                         <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-gray-50 sm:text-nowrap   hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/About"} element={<About/>}>About Us</Link>
                     
                     
-                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-gray-50 sm:text-nowrap  hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Add confession"} element={<Add/>}>Add confession</Link>
+                        <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-gray-50 sm:text-nowrap  hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Add confession"} element={<Add/>}>Add Items</Link>
                     
                     
                         <Link className='active:translate-y-1 max-sm:hover:w-[90%] h-[10vh] px-5 flex items-center justify-center hover:bg-gray-50 sm:text-nowrap  hover:shadow-xl hover:shadow-white/50 ease-linear hover:border-black p-[7px] hover:text-black  border-white  duration-150' to={"/Contact"} element={<Contact/>}>Contact Us</Link>

@@ -9,7 +9,7 @@ const Auth = () => {
   const navigate=useNavigate()
   const[loading,setLoading]=useState(false);
   const [form, setForm] = useState({});
-  const [see, setSee] = useState(false);
+  const [see, setSee] = useState(true);
   const [err,setErr]= useState("")
   
   const handlesubmit = async (e) => {
@@ -29,12 +29,17 @@ const Auth = () => {
        setLoading(false)
       }
       else{
-        setErr(data.message)
+if(data.message==='error'){
+  setErr("User Already Made")
+}
+else{
+  setErr(data.message)
+}
+  
 
       }
       console.log(err);
     } catch (error) {
-      console.error('Error:', error);
       setLoading(false)
     }
   }
@@ -58,14 +63,19 @@ console.log(see);
 
   return (
     <div className='h-screen w-screen bg-indigo-400 text-white flex items-center pr-[2.5] pt-3 justify-center overflow-hidden'>
-      <div>
-        <section className='h-[5vh] w-[40vw] text-white font-semibold text-2xl  capitalize text-center flex items-center justify-center '><section className='max-sm:w-[100vw'>Sign up</section></section>
+     <div className='w-1/2 h-[100vh] flex items-center justify-center'>
+     <section className='text-3xl font-mono'>Rate X</section>
+     </div>
+      <div>    
+        <section className='h-[5vh] w-[40vw] text-white font-semibold text-2xl  capitalize text-center flex items-center justify-center '>
+          
+          <section className='max-sm:w-[100vw'>Sign up</section></section>
         <div className='min-h-[500px] w-[40vw] bg-indigo-100 rounded-lg flex flex-col items-center pt-11 p-5 max-lg:h-[60vh] max-lg:w-[90vw] shadow-lg max-lg:pt-5 max-sm:h-[70vh] max-sm:w-[90vw] gap-3 justify-start'>
           <label className='text-black text-md w-[100%] text-left'>Username
             <input onChange={handlechange} id="username" type="text" placeholder='Enter a Username' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
           </label>
           <label className='text-black text-md w-[100%] text-left'>E-mail
-            <input onChange={handlechange} id="email" type="text" placeholder='Enter an E-mail' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
+            <input onChange={handlechange} id="email" type='email' placeholder='Enter an E-mail' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 placeholder:text-gray-700 h-[55px] w-full p-1' />
           </label>
           <label className='text-black text-md w-[100%] text-left'>Password
             <input onChange={handlechange} id="password" type={see?"password":'text'} placeholder='Enter a password' className='  rounded-md bg-indigo-300 shadow-lg focus:shadow-indigo-500/50 duration-150 relative placeholder:text-gray-700 h-[55px] w-full p-1' />
