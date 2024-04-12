@@ -62,8 +62,8 @@ console.log(see);
   }
 
   return (
-    <div className='h-screen w-screen bg-indigo-400 text-white flex items-center pr-[2.5] pt-3 justify-center overflow-hidden'>
-     <div className='w-1/2 h-[100vh] flex items-center justify-center'>
+    <div className='h-screen w-screen bg-indigo-400 text-white flex items-center pr-[2.5] pt-3 justify-center max-sm:flex-col overflow-hidden'>
+     <div className='w-1/2 h-[100vh] max-sm:h-[10vh] flex items-center justify-center'>
      <section className='text-3xl font-mono'>Rate X</section>
      </div>
       <div>    

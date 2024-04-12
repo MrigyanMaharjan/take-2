@@ -9,7 +9,6 @@ import Contact from './pages/Contact.jsx'
 import Add from './pages/Add.jsx'
 import More from './pages/More.jsx'
 import Authstate from './context/authstate.jsx'
-import Chat from './components/Chat.jsx'
 import Feed from './components/Feed.jsx'
 import Rating from './pages/Rating.jsx'
 
@@ -28,7 +27,6 @@ const App = () => {
           <Route path={"/Add confession"} element={<Add/>}></Route>
           <Route path={"/Contact"} element={<Contact/>}></Route>
           <Route path={"/More"} element={<More/>}></Route>
-          <Route path={"/home/chat"} element={<Chat/>}></Route>
           <Route path={"/home/feed"} element={<Feed/>}></Route>
           <Route path={"add"} element={<Add/>}></Route>
         </Routes>

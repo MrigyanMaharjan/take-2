@@ -16,7 +16,6 @@ const Homepage = () => {
      </span></motion.article>  
      <motion.section initial={{y:'100%',opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.5,delay:0.2 ,type:"spring"}} className='flex items-center gap-4 justify-center flex-col pt-10'>
       <Link  to={"feed"}  className='p-2 rounded-xl border-[1px] w-[150px] flex items-center justify-center capitalize h-[6vh] hover:bg-white hover:text-black duration-100 ease-linear shadow-md glow  border-white'>Watch the feed </Link>
-      <Link to={"chat"} className='p-2 rounded-xl border-[1px] w-[150px] flex items-center justify-center capitalize h-[6vh] hover:bg-white hover:text-black duration-100 ease-linear shadow-md glow  border-white'>Chat</Link>
       </motion.section>   
         </motion.section>
     </div>
