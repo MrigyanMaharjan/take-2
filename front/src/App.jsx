@@ -11,9 +11,13 @@ import More from './pages/More.jsx'
 import Authstate from './context/authstate.jsx'
 import Feed from './components/Feed.jsx'
 import Rating from './pages/Rating.jsx'
+import Admin from './pages/Admin.jsx'
+import Adminpanel from './pages/Adminpanel.jsx'
 
 const App = () => {
+
   return (
+
     <div>
       <Authstate>
       <Router>
@@ -29,6 +33,8 @@ const App = () => {
           <Route path={"/More"} element={<More/>}></Route>
           <Route path={"/home/feed"} element={<Feed/>}></Route>
           <Route path={"add"} element={<Add/>}></Route>
+          <Route path='/Admin' element={<Admin/>}></Route>
+          <Route path='/adminpanel' element={<Adminpanel/>}></Route>
         </Routes>
       </Router>
       </Authstate>

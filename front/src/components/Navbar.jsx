@@ -43,10 +43,10 @@ const Navbar = () => {
             >
                 <section onClick={toggleSidebar} className='absolute right-2 bg-gray-900 top-3 max-sm:flex hidden'></section>
                 <ul className='flex flex-col w-[100%] pt-[3rem] gap-5'>
-                    <Link to={"/Confessions"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
-                        Confessions</Link>
+                    <Link to={"/Rating"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
+                        Items</Link>
                         <Link to={"/add"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
-                        Add confession</Link>
+                        Add Items</Link>
                         <Link to={"/Contact"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>
                         Contact Us</Link>
                         <Link to={"/More"} className='active:translate-y-1 w-[100%] hover:bg-gray-500 border-2 hover:text-black hover:shadow-lg hover:shadow-indigo-900/50 hover:opacity-55 p-[10px] border-transparent duration-100'>

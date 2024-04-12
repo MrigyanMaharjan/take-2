@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Confession from './Rating';
+
 
 const Add = () => {
-  const [formdata,setFormdata] = useState({confession:""})
+  const [formdata,setFormdata] = useState({})
   const [loading,setLoading]= useState(false)
   const [res,setRes]=useState("")
 
@@ -13,19 +13,21 @@ let text=document.querySelector(".textarea");
    
     
     setRes("")
-    setFormdata({...formdata,confession:e.target.value.trim()})
+    setFormdata({...formdata,Item:e.target.value.trim()})
  
 }
+console.log(formdata);
 const handlepost = async () => {
   text.value=""
     setLoading(true)
     const postdata = await fetch('https://take-2-3.onrender.com/add', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {'Content-Type': 'application/json' },
         body: JSON.stringify(formdata)
     });
-    
+   
     setLoading(false)
+    console.log(loading);
   if(postdata.ok){
     console.log("fetchcomplete");
     setRes("Added")
@@ -44,7 +46,7 @@ const handlepost = async () => {
       </section>
       <section className='w-[60%] h-[70%] bg-gray-600 flex  items-center justify-start flex-col pt-10'>
         <section className='w-[100%] text-start pl-10'>Enter an Item</section>
-        <input onChange={(e)=>handlechange(e)} id='confession' type="text" placeholder='Enter an item ' className='textarea text-white bg-slate-500 text-center text-wrap overflow-clip placeholder:justify-start h-[8vh] placeholder:text-sm outline-none active:scale-[1.01] focus:scale-[1.01] hover:scale-[1.01] transition placeholder:text-white text-sm px-2 rounded-md w-[90%]'/>
+        <input onChange={(e)=>handlechange(e)} id='Item' type="text" placeholder='Enter an item ' className='textarea text-white bg-slate-500 text-center text-wrap overflow-clip placeholder:justify-start h-[8vh] placeholder:text-sm outline-none active:scale-[1.01] focus:scale-[1.01] hover:scale-[1.01] transition placeholder:text-white text-sm px-2 rounded-md w-[90%]'/>
         
       </section>
 

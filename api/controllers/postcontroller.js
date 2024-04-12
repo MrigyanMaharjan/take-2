@@ -4,12 +4,12 @@ const addpeople=async(req,res,next)=>{
     const respose=await req.body
     console.log(respose);
     const {Item}=req.body;
-   
-    const newuser= new People({
-       confession
+   console.log(req.body);
+    const newpost= new People({
+       Item
     })
     try {
-      await newuser.save()
+      await newpost.save()
       console.log("Item posted");
       return res.status(201).json({message:"done"})
     } catch (error) {
