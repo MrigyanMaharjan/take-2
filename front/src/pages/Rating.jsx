@@ -14,7 +14,7 @@ const Rating = () => {
      const handleclick=async(e)=>{
     e.target.innerText++
         setLike({Item:e.target.id})
-        const postdata = await fetch('http://localhost:3000/likes', {
+        const postdata = await fetch('https://take-2-3.onrender.com/likes', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(like)
@@ -35,7 +35,7 @@ const Rating = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/add', { method: "GET" });
+                const response = await fetch('https://take-2-3.onrender.com/add', { method: "GET" });
                 const fetchedData = await response.json();
                 setData(fetchedData);
                 setFetched(true);
