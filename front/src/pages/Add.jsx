@@ -13,7 +13,7 @@ let text=document.querySelector(".textarea");
    
     
     setRes("")
-    setFormdata({...formdata,Item:e.target.value.trim()})
+    setFormdata({...formdata,[e.target.id]:e.target.value.trim()})
  
 }
 console.log(formdata);
@@ -47,6 +47,8 @@ const handlepost = async () => {
       <section className='w-[60%] h-[70%] bg-gray-600 flex  items-center justify-start flex-col pt-10'>
         <section className='w-[100%] text-start pl-10'>Enter an Item</section>
         <input onChange={(e)=>handlechange(e)} id='Item' type="text" placeholder='Enter an item ' className='textarea text-white bg-slate-500 text-center text-wrap overflow-clip placeholder:justify-start h-[8vh] placeholder:text-sm outline-none active:scale-[1.01] focus:scale-[1.01] hover:scale-[1.01] transition placeholder:text-white text-sm px-2 rounded-md w-[90%]'/>
+        <section className='w-[100%] text-start pl-10'>Enter Item description</section>
+        <input onChange={(e)=>handlechange(e)} id='description' type="text" placeholder='Enter description ' className='textarea text-white bg-slate-500 text-center text-wrap overflow-clip placeholder:justify-start h-[8vh] placeholder:text-sm outline-none active:scale-[1.01] focus:scale-[1.01] hover:scale-[1.01] transition placeholder:text-white text-sm px-2 rounded-md w-[90%]'/>
         
       </section>
 

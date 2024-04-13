@@ -5,7 +5,12 @@ const Peopleschema=new mongoose.Schema({
         type:String,
         required:true,
         unique:false,
-    }
+    },
+    description:{
+        type:String,
+        required:true,
+        unique:false,
+    },
 } , {timestamps:true})
 
 const People= mongoose.model('People',Peopleschema);

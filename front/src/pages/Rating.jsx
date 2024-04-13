@@ -27,7 +27,7 @@ const Rating = () => {
             {fetched ? (
                 <ul className='grid pb-10 min-h-screen w-screen gap-4 lg:grid-cols-4 sm:grid-cols-1 max-sm:text-sm md:text-sm lg:text-md ms:grid-cols-2 md:grid-cols-3'>
                     {data.map((item, index) => (
-                        <article className='bg-gray-800 w-full hover:scale-[1.0] transition min-h-[15vh] flex rounded-md items-start p-2 justify-center text-center' key={index}>{item.Item}</article>
+                        <article className='bg-gray-800 w-full hover:scale-[1.0] transition min-h-[15vh] flex rounded-md items-start p-2 justify-center text-center' key={index}>{item.Item} {item.description}</article>
                     ))}
                 </ul>
             ) : (
