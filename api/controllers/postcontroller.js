@@ -2,7 +2,7 @@ import People from "../model/peoplemodel.js";
 
 const addpeople=async(req,res,next)=>{
     const respose=await req.body
-    const { Item,description }=respose.json();
+    const { Item,description }=req.body;
     console.log(respose);
    console.log();
     const newpost= new People({

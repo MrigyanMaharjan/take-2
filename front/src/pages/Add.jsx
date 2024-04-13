@@ -21,9 +21,9 @@ const handlepost = async () => {
   text.value=""
     setLoading(true)
     const postdata = await fetch('https://take-2-3.onrender.com/add', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json' },
-        body: JSON.stringify(formdata)
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formdata)
     });
    
     setLoading(false)
