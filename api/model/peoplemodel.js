@@ -11,6 +11,16 @@ const Peopleschema=new mongoose.Schema({
         required:true,
         unique:false,
     },
+    likes:{
+        type:Number,
+        required:false,
+        unique:false,
+    },
+    liked:{
+        type:Boolean,
+        required:false,
+        unique:false
+    }
 } , {timestamps:true})
 
 const People= mongoose.model('People',Peopleschema);

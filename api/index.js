@@ -41,6 +41,24 @@ app.get('/add', async (req, res) => {
    }
 });
 
+app.post('/likes', async (req, res) => {
+   try {
+      const {Item}=req.body
+      console.log(req.body);
+     // Find the like document
+     let like = await People.findOne({Item});
+ 
+     like.likes++;
+   
+     await like.save();
+ 
+     res.send({ count: like.count });
+ 
+   } catch (error) {
+     res.status(500).send(error.message);
+   }
+ });
+
 app.use((err,req,res,next)=>{
    const statuscode=err.statuscode || 500;
    const message=err.message;

@@ -6,7 +6,7 @@ const addpeople=async(req,res,next)=>{
     console.log(respose);
    console.log();
     const newpost= new People({
-       Item,description
+       Item,description,likes:0,liked:false
     })
     try {
       await newpost.save()
