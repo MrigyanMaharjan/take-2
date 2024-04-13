@@ -40,7 +40,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent; 
+    background-color: rgb(75, 75, 75); 
 }
 
 ::-webkit-scrollbar-thumb {

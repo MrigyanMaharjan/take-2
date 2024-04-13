@@ -13,12 +13,13 @@ import Feed from './components/Feed.jsx'
 import Rating from './pages/Rating.jsx'
 import Admin from './pages/Admin.jsx'
 import Adminpanel from './pages/Adminpanel.jsx'
+import Footer from './components/Footer.jsx'
 
 const App = () => {
 
   return (
 
-    <div>
+    <div className='overflow-x-hidden'>
       <Authstate>
       <Router>
         <Routes>
